@@ -74,13 +74,19 @@ window.update = update;
 
 <style scoped>
   .count-app{
-    --unit: 10mm;
+    --unit: 7mm;
+  }
+  @media screen and (min-width: 600px) {
+    .count-app{
+      --unit: 10mm;
+    }
   }
   .date{
     display: flex;
     /*border: 1px solid lightgrey;*/
     justify-content: center;
     width: 100%;
+    margin-top: calc(1*var(--unit));
   }
   .date input{
     font-size: calc(0.75*var(--unit));
@@ -108,7 +114,7 @@ window.update = update;
     flex-direction: column;
     gap: 0.5em;
     width: 25%;
-    max-width: calc(4*var(--unit));
+    max-width: calc(3.5*var(--unit));
     text-align: center;
     /*border: 1px solid lightgrey;*/
   }
